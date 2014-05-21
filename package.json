@@ -1,6 +1,7 @@
 {
   "author": "Henri Bourcereau",
   "name": "playlists-bin",
+  "description": "Search LastFM loved tracks on Spotify and Youtube",
   "version": "0.3.0",
   "licenses": {
     "type": "MIT"
