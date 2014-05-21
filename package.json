@@ -1,0 +1,19 @@
+{
+  "author": "Henri Bourcereau",
+  "name": "playlists-bin",
+  "version": "0.3.0",
+  "licenses": {
+    "type": "MIT"
+  },
+  "bin": {
+    "lastfm-playlists": "./bin/lastfm-playlists.js"
+  },
+  "dependencies": {
+    "opts": "~1.2.2",
+    "lodash": "~2.4.1",
+    "playlists": "~0.3.0",
+    "playlists-spotify": "~0.3.0",
+    "playlists-youtube": "~0.3.0",
+    "playlists-lastfm": "~0.3.0"
+  }
+}
