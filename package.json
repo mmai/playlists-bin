@@ -14,6 +14,7 @@
     "playlists": "~0.3.0",
     "playlists-spotify": "~0.3.0",
     "playlists-youtube": "~0.3.0",
-    "playlists-lastfm": "~0.3.0"
+    "playlists-lastfm": "~0.3.0",
+    "colors": "~0.6.2"
   }
 }

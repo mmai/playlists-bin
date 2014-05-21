@@ -4,6 +4,7 @@
 
 var _ = require('lodash');
 var opts = require('opts');
+var colors = require('colors');
 var playlists = require("playlists");
 var lastfm = require('playlists-lastfm');
 
@@ -44,13 +45,13 @@ var mylastfm = playlists.makeMusicService(lastfm, {key: settings.lastfm_api_key,
 var playTarget = playlists.makeMusicService(services[service]);
 
 mylastfm.getLovedTracks().then(function(lastfm_loved_tracks){
-    console.log('------------------------------------------');
+    console.log('------------------------------------------'.bold);
     console.log('Found ' + lastfm_loved_tracks.length + ' loved tracks on LastFM for '+user+'.');
     console.log('Searching on ' + service);
-    console.log('------------------------------------------\n\n');
+    console.log('------------------------------------------\n\n'.bold);
 
     playTarget.searchPlaylist(new playlists.Playlist(lastfm_loved_tracks), function(searchstring, found){
-            console.log(searchstring + " "  + (found?"found":"not found"));
+            console.log(searchstring + " "  + (found?"found".green:"not found".red));
         }).then(function(playlist){
             console.log("\n");
             console.log(playlist.toText());
