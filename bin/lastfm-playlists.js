@@ -11,6 +11,9 @@ var settings = require('../settings.js');
 var services = {
     youtube: playlists.makeMusicService("youtube", {key: settings.youtube_api_key}),
     soundcloud: playlists.makeMusicService("soundcloud", {key: settings.soundcloud_api_key}),
+    grooveshark: playlists.makeMusicService("grooveshark", {key: settings.grooveshark_api_key}),
+    deezer: playlists.makeMusicService("deezer"),
+//    hypem: playlists.makeMusicService("hypem"),
     spotify: playlists.makeMusicService("spotify")
 };
 
@@ -61,5 +64,5 @@ mylastfm.getLovedTracks().then(function(lastfm_loved_tracks){
 
 })
 .catch(function (error){
-        console.log(error.message);
+        console.log(error);
     });
